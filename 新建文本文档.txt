@@ -1,0 +1,173 @@
+<script type="text/javascript"> 
+$(function(){
+	var map=$("#map");
+	var dian='<div class="biaozhu"><img src="images/dian.jpg"/></div>'
+	/*var All=[{x:236,y:553},{x:358,y:474},{x:525,y:135},{x:1196,y:431},{x:1382,y:489}]
+	All.leixing="all";*/
+	var jingdian=[{x:1506,y:599,_href:"/index.php/Yuyue/info/id/44 ",tit:"司马小烧酒坊"},{x:1673,y:573,_href:"/index.php/Yuyue/info/id/43 ",tit:"永顺染坊"},{x:2160,y:632,_href:"/index.php/Yuyue/info/id/42",tit:"英华书院"},{x:2209,y:524,_href:"/index.php/Yuyue/info/id/41",tit:"杨无敌祠"},{x:3004,y:550,_href:"/index.php/Yuyue/info/id/28",tit:"震远镖局"},{x:3173,y:644,_href:"/index.php/Yuyue/info/id/18 ",tit:"八旗会馆"}]
+	jingdian.leixing="jingdian";
+	
+	var canyin=[{x:209,y:113,tit:"娱乐餐饮"},{x:474,y:185,_href:"/index.php/Yuyue/gourmetinfo/id/49",tit:"纳兰轩餐厅"},{x:747,y:405,_href:"/index.php/Yuyue/gourmetinfo/id/48",tit:"古北烤鸭王"},{x:603,y:846,_href:"/index.php/Yuyue/gourmetinfo/id/188",tit:"蜻蜓逐宴全日制自助餐厅"},{x:633,y:846,_href:"/index.php/Yuyue/gourmetinfo/id/197",tit:"海の春日本料理餐厅"},{x:663,y:846,_href:"/index.php/Yuyue/gourmetinfo/id/200",tit:"揽胜轩中餐厅"},{x:1540,y:771,_href:"/index.php/Yuyue/gourmetinfo/id/207",tit:"粥煎饼"},{x:1632,y:683,_href:"/index.php/Yuyue/gourmetinfo/id/46",tit:"民宿家常菜"},{x:1605,y:724,_href:"/index.php/Yuyue/gourmetinfo/id/210",tit:"刘婆茶铺"},{x:1794,y:702,_href:"/index.php/Yuyue/gourmetinfo/id/46",tit:"民宿家常菜"},{x:1988,y:619,tit:"娱乐餐饮"},{x:2120,y:570,_href:"/index.php/Yuyue/gourmetinfo/id/199",tit:"書式生活（书吧）"},{x:2296,y:689,_href:"/index.php/Yuyue/gourmetinfo/id/203",tit:"水榭茶吧"},{x:1970,y:388,_href:"/index.php/Yuyue/gourmetinfo/id/46",tit:"民宿家常菜"},{x:1989,y:332,_href:"/index.php/Yuyue/gourmetinfo/id/46",tit:"民宿家常菜"},{x:1988,y:284,_href:"/index.php/Yuyue/gourmetinfo/id/46",tit:"民宿家常菜"},{x:2164,y:328,_href:"/index.php/Yuyue/gourmetinfo/id/46",tit:"民宿家常菜"},{x:2199,y:307,_href:"/index.php/Yuyue/gourmetinfo/id/25",tit:"披萨店"},{x:2226,y:440,_href:"/index.php/Yuyue/gourmetinfo/id/46",tit:"民宿家常菜"},{x:2296,y:401,_href:"/index.php/Yuyue/gourmetinfo/id",tit:"将军羊面铺"},{x:2340,y:354,_href:"/index.php/Yuyue/gourmetinfo/id/198",tit:"古北口炒肝"},{x:2392,y:232,_href:"/index.php/Yuyue/gourmetinfo/id/204",tit:"水街糖水店"},{x:2392,y:262,_href:"/index.php/Yuyue/gourmetinfo/id/51",tit:"汤河清真餐馆"},{x:2452,y:192,_href:"/index.php/Yuyue/gourmetinfo/id/46",tit:"民宿家常菜"},{x:2521,y:359,_href:"/index.php/Yuyue/gourmetinfo/id/208",tit:"长城书舍咖啡厅"},{x:2664,y:427,_href:"/index.php/Yuyue/gourmetinfo/id/46",tit:"民宿家常菜"},{x:2679,y:473,_href:"/index.php/Yuyue/gourmetinfo/id/46",tit:"民宿家常菜"},{x:2742,y:493,tit:"娱乐餐饮"},{x:2739,y:542,_href:"/index.php/Yuyue/gourmetinfo/id/46",tit:"民宿家常菜"},{x:2799,y:750,_href:"/index.php/Yuyue/gourmetinfo/id/206",tit:"乌镇会文昌阁中餐厅"},{x:2829,y:750,tit:"娱乐餐饮"},{x:3106,y:498,_href:"/index.php/Yuyue/gourmetinfo/id/46",tit:"民宿家常菜"},{x:3107,y:574,_href:"/index.php/Yuyue/gourmetinfo/id/47",tit:"古关火锅城"},{x:3061,y:649,_href:"/index.php/Yuyue/gourmetinfo/id/46",tit:"民宿家常菜"},{x:3240,y:585,_href:"/index.php/Yuyue/gourmetinfo/id/205",tit:"烧饼铺"},{x:3283,y:526,_href:"/index.php/Yuyue/gourmetinfo/id/46",tit:"民宿家常菜"},{x:3327,y:616,_href:"/index.php/Yuyue/gourmetinfo/id/46",tit:"民宿家常菜"},{x:3289,y:677,_href:"/index.php/Yuyue/gourmetinfo/id/52",tit:"烧肉馆"},{x:3562,y:335,_href:"/index.php/Yuyue/gourmetinfo/id/202",tit:"望京楼Flavor W餐厅"},{x:2251,y:284,_href:"/index.php/Yuyue/gourmetinfo/id/45",tit:"箭楼牛排馆"}]
+	canyin.leixing="canyin";
+	
+	var gouwu=[{x:1426,y:599,_href:"/index.php/Yuyue/shoppinginfo/id/30",tit:"司马小烧酒坊商铺"},{x:1552,y:662,_href:"/index.php/Yuyue/shoppinginfo/id/157",tit:"酱菜馆"},{x:1625,y:564,_href:"/index.php/Yuyue/shoppinginfo/id/19",tit:"永顺染坊商铺"},{x:1755,y:605,_href:"/index.php/Yuyue/shoppinginfo/id/161",tit:"剪纸店"},{x:1697,y:724,_href:"/index.php/Yuyue/shoppinginfo/id/169",tit:"羌乐阁"},{x:1741,y:783,_href:"/index.php/Yuyue/shoppinginfo/id/175",tit:"建昆堂灯笼铺"},{x:1578,y:797,_href:"/index.php/Yuyue/shoppinginfo/id/173",tit:"珐蓝居"},{x:1820,y:587,_href:"/index.php/Yuyue/shoppinginfo/id/160",tit:"皮影戏馆"},{x:1838,y:642,_href:"/index.php/Yuyue/shoppinginfo/id/162",tit:"谢馥春香粉店"},{x:1882,y:654,_href:"/index.php/Yuyue/shoppinginfo/id/171",tit:"篦梳坊"},{x:1863,y:758,_href:"/index.php/Yuyue/shoppinginfo/id/166",tit:"宝兴隆鞋莊"},{x:1922,y:737,_href:"/index.php/Yuyue/shoppinginfo/id/163",tit:"风筝文化馆"},{x:1934,y:631,_href:"/index.php/Yuyue/shoppinginfo/id/167",tit:"京华烟云"},{x:3183,y:691,_href:"/index.php/Yuyue/shoppinginfo/id/165",tit:"八旗纪念品店"},{x:3223,y:691,_href:"/index.php/Yuyue/shoppinginfo/id/164",tit:"永顺八旗店"}]
+	gouwu.leixing="gouwu";
+	
+	var yule=[{x:2872,y:572,_href:"/index.php/Yuyue/shoppinginfo/id/38",tit:"龙凤池温泉"},{x:3376,y:500,tit:"倾城似水酒吧"},{x:1975,y:793,_href:"/index.php/Yuyue/shoppinginfo/id/29",tit:"喊泉"}]
+	yule.leixing="yule";
+	
+	var zhusu=[{x:747,y:180,_href:"/index.php/Yuyue/hotelinfo/id/191",tit:"水镇之家"},{x:1662,y:683,_href:"/index.php/Yuyue/hotelinfo/id/122",tit:"永顺客栈"},{x:1796,y:651,_href:"/index.php/Yuyue/hotelinfo/id/118",tit:"英华客栈"},{x:2000,y:388,tit:"艺城客栈"},{x:2019,y:332,_href:"/index.php/Yuyue/hotelinfo/id/177",tit:"川桥客栈"},{x:2018,y:284,_href:"/index.php/Yuyue/hotelinfo/id/168",tit:"望塔客栈"},{x:2134,y:328,_href:"/index.php/Yuyue/hotelinfo/id/107",tit:"卧龙堡客栈"},{x:2183,y:414,_href:" /index.php/Yuyue/hotelinfo/id/127",tit:"杨家客栈"},{x:2482,y:192,_href:"/index.php/Yuyue/hotelinfo/id/114",tit:"梨园客栈"},{x:2573,y:206,_href:"/index.php/Yuyue/hotelinfo/id/155",tit:"枕水客栈"},{x:2582,y:249,_href:"/index.php/Yuyue/hotelinfo/id/147",tit:"码头客栈"},{x:2461,y:388,_href:"/index.php/Yuyue/hotelinfo/id/73 ",tit:"长城书舍"},{x:2634,y:427,_href:"/index.php/Yuyue/hotelinfo/id/183",tit:"雁行客栈"},{x:2649,y:473,_href:"/index.php/Yuyue/hotelinfo/id/137",tit:"君约客栈"},{x:2779,y:572,_href:"/index.php/Yuyue/hotelinfo/id/133",tit:"倾城客栈"},{x:2769,y:750,_href:"/index.php/Yuyue/hotelinfo/id/65",tit:"乌镇会精品酒店"},{x:3091,y:649,_href:"/index.php/Yuyue/hotelinfo/id/23",tit:"镖局客栈"},{x:3285,y:572,_href:"/index.php/Yuyue/hotelinfo/id/99",tit:"雁门客栈"},{x:3313,y:526,_href:"/index.php/Yuyue/hotelinfo/id/92",tit:"八旗客栈"},{x:3532,y:335,_href:"/index.php/Yuyue/hotelinfo/id/22",tit:"望京楼精品酒店"},{x:603,y:846,_href:"/index.php/Yuyue/hotelinfo/id/36",tit:"水镇大酒店"}]
+	zhusu.leixing="zhusu";
+	
+	/*xunhuan(All);*/
+	xhjd(jingdian);
+	xhcy(canyin);
+	xhgw(gouwu);
+	xhyl(yule);
+	xhzs(zhusu);
+	function xhjd(arr){
+		for(var i=0;i<arr.length;i++){
+			var div=document.createElement("div");
+			div.className="jdbz";
+			//alert(tanchuang1);
+			$(div).attr("leixing",arr.leixing);
+			
+			$(div).attr("href",arr[i]._href);
+			$(div).attr("title",arr[i].tit);
+
+			map.append(div);
+			div.style.left=arr[i].x+"px";
+			div.style.top=arr[i].y+"px";
+		}
+	}
+	function xhcy(arr){
+		for(var i=0;i<arr.length;i++){
+			var div=document.createElement("div");
+			div.className="cybz";
+			//alert(tanchuang1);
+			$(div).attr("leixing",arr.leixing);
+			
+			$(div).attr("href",arr[i]._href);
+			$(div).attr("title",arr[i].tit);
+
+			map.append(div);
+			div.style.left=arr[i].x+"px";
+			div.style.top=arr[i].y+"px";
+		}
+	}
+	function xhgw(arr){
+		for(var i=0;i<arr.length;i++){
+			var div=document.createElement("div");
+			div.className="gwbz";
+			//alert(tanchuang1);
+			$(div).attr("leixing",arr.leixing);
+			
+			$(div).attr("href",arr[i]._href);
+			$(div).attr("title",arr[i].tit);
+			
+			map.append(div);
+			div.style.left=arr[i].x+"px";
+			div.style.top=arr[i].y+"px";
+		}
+	}
+	function xhyl(arr){
+		for(var i=0;i<arr.length;i++){
+			var div=document.createElement("div");
+			div.className="ylbz";
+			//alert(tanchuang1);
+			$(div).attr("leixing",arr.leixing);
+			
+			$(div).attr("href",arr[i]._href);
+			$(div).attr("title",arr[i].tit);
+
+			map.append(div);
+			div.style.left=arr[i].x+"px";
+			div.style.top=arr[i].y+"px";
+		}
+	}
+	function xhzs(arr){
+		for(var i=0;i<arr.length;i++){
+			var div=document.createElement("div");
+			div.className="zsbz";
+			//alert(tanchuang1);
+			$(div).attr("leixing",arr.leixing);
+			
+			$(div).attr("href",arr[i]._href);
+			$(div).attr("title",arr[i].tit);
+
+			map.append(div);
+			div.style.left=arr[i].x+"px";
+			div.style.top=arr[i].y+"px";
+		}
+	}
+	$(".nav li").click(function(){
+		var index=$(".nav li").index(this);
+		$(".nav li").removeClass("on").eq(index).addClass("on");
+		var leixing=$(this).attr("leixing");
+	
+		map.find(">div").css("display","none")
+		map.find(">div[leixing="+leixing+"]").css("display","block")
+		
+		if(index==0)
+			$(".nav li").css("background","none").eq(index).css("background","#007e6a")
+		else if(index==1)	
+			$(".nav li").css("background","none").eq(index).css("background","#a50312")
+		else if(index==2)
+			$(".nav li").css("background","none").eq(index).css("background","#ffab19")
+		else if(index==3)
+			$(".nav li").css("background","none").eq(index).css("background","#6baf00")
+		else if(index==4)
+			$(".nav li").css("background","none").eq(index).css("background","#1c3b7f")
+		/*if(index==0)
+			map.find(">div").css("display","block")
+		else{
+			map.find(">div").css("display","none")
+			map.find(">div[leixing="+leixing+"]").css("display","block")
+		}*/
+	})
+	
+	var menu = "";
+	if(menu == 'hotel'){
+		$(".nav li").eq(4).trigger("click");
+	}else if(menu == 'scenic'){
+		$(".nav li").eq(0).trigger("click");
+	}else if(menu == 'gourmet'){
+		$(".nav li").eq(1).trigger("click");
+	}else if(menu == 'leisure'){
+		$(".nav li").eq(2).trigger("click");
+	}else{
+		$(".nav li").eq(0).trigger("click");
+	}
+	
+	$(".gwbz,.jdbz,.cybz,.ylbz,.zsbz").click(function(){
+		var _href=$(this).attr("href");
+		if(_href)
+			window.open(_href);
+	})
+	
+  	//关闭当前页面
+  	$(".fanhui").click(function(){
+  		window.close();
+  	}) 
+  	// 区域分布图
+  	$(".navLeft").css("width",$(window).width()-636+"px");
+  	$('.nav').css("width",$(window).width()-636+"px");
+  	$('.nav li').css("width",($(window).width()-636)/5+"px");
+  	// 区域分布的显示与隐藏
+    $(".qyfm").hover(function(){
+    	$(".navLeft").stop().animate({"bottom":"0"},500);
+    	//$(".navLeft").stop().animate({opacity:"1"},1000);
+    	$(".fanhui").stop().animate({"bottom":"0"},500);
+    	$(".fullView").stop().animate({"bottom":"0"},500);
+    	//$(".fanhui").stop().animate({opacity:"1"},1000)
+    	$(this).children(".imgs").stop().animate({"bottom":"70px"},500);
+    },function(){
+    	$(".navLeft").stop().animate({"bottom":"-69px"},500);
+    	
+    	$(".fanhui").stop().animate({"bottom":"-69px"},500);
+    	$(".fullView").stop().animate({"bottom":"-69px"},500);
+    	
+    	$(this).children(".imgs").stop().animate({"bottom":"0"},500);
+    })
+})
+</script>

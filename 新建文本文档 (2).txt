@@ -1,0 +1,29 @@
+  <!-- <div class="qyfm">
+    <img src="images/tit.jpg" class="imgs" />
+    <div class="navLeft">
+        <ul class="nav">
+        	<li leixing="all"><a href="javascript:;">全部景点</a></li>
+        	<li leixing="jingdian"><a href="javascript:;">观光景点</a></li>
+        	<li leixing="canyin"><a href="javascript:;">美食餐饮</a></li>
+        	<li leixing="gouwu"><a href="javascript:;">休闲购物</a></li>
+        	<li leixing="yule"><a href="javascript:;">缤纷娱乐</a></li>
+        	<li leixing="zhusu"><a href="javascript:;">酒店住宿</a></li>
+        </ul>
+        <div class="fullView">
+        	<img src="images/720_xin.jpg" />
+            <ul class="hover">
+                <li><a href="" target="_blank"><p>八旗会馆720&deg;</p></a></li>
+                <li><a href="" target="_blank"><p>震远镖局720&deg;</p></a></li>
+                <li><a href="" target="_blank"><p style="font-size:12px;">游客服务中心720&deg;</p></a></li>
+                <li><a href="" target="_blank"><p>日月岛广场720&deg;</p></a></li>
+                <li><a href="" target="_blank"><p>汤市街720&deg;</p></a></li>
+                <li><a href="" target="_blank"><p style="font-size:12px;">司马小烧酒坊720&deg;</p></a></li>
+                <li><a href="" target="_blank"><p>英华桥720&deg;</p></a></li>
+                <li><a href="" target="_blank"><p>永顺染坊720&deg;</p></a></li>
+                <li><a href="" target="_blank"><p>上官桥720&deg;</p></a></li>
+                <li><a href="" target="_blank"><p>司马台长城720&deg;</p></a></li>
+            </ul>
+        </div>        
+	</div>
+	<a style="cursor: pointer;position:fixed;bottom:-69px; right:399px; " class="fanhui"><img src="images/return.jpg" /></a>
+  </div> -->
