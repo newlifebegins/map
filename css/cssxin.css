@@ -16,7 +16,7 @@
 #map .area dl dd{float: right;text-align: left;width: 142px;height: 83px;overflow: hidden;}
 #map .area dl dd h5{width: 142px;height: 18px;font-size: 13px;color: #fff;overflow: hidden;margin-bottom: 10px;}
 #map .area dl dd p{width: 142px;height: 38px;font-size: 12px;color: #deeae7;overflow: hidden;line-height: 160%;}
-#map .area dl dd a{width: 100%;display: block;color: #00d9b8;text-align: right;}
+#map .area dl dd a{width: 100%;display: block;color: #f00;text-align: right;}
 
 .navLeft{ /*width:182px;*/ position:fixed;/* top:115px;*/ z-index:10; bottom:-69px;left: 0px; }
 .nav{ /*width:182px;*/ /*padding:7px 0;*/ background:#fff;height: 69px;}
