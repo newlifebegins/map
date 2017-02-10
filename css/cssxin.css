@@ -25,8 +25,8 @@ textarea{resize:none;}
 .wrap{ overflow-x:hidden; margin:0 auto; position:relative;}
 .map{ width:98%;  height:1015px; overflow:hidden; position:relative;}
 /*.map img{ width:1439px; height:750px; position:absolute; top:0; left:0;}*/
-#map{ /*width:3851px; height:1015px;*/ position:absolute;/* top:-122px;*/ top:-302px; left:-209px; }
-/*#map img{ width:3851px; height:1015px; }*/
+#map{ width:3600px; height:2050px; position:absolute;/* top:-122px;*/ top:-302px; left:-209px; }
+#map img{ width:3600px; height:2050px; }
 #map .area{position: absolute;}
 #map .area .title{position: absolute;font-size: 30px;font-weight: bold;color: #731022;width: 214px;height: 44px;background: transparent;text-align: center;line-height: 44px;text-indent: -999999px;}
 #map .area:hover dl{display: block;}
